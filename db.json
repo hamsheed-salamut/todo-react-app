@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "priority": "low",
+      "due_date": "27 June 2023",
+      "text": "lorem impsum"
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "priority": "low",
+      "due_date": "27 June 2023",
+      "text": "lorem impsum"
+    },
+    {
+      "id": 3,
+      "name": "json-server",
+      "priority": "low",
+      "due_date": "27 June 2023",
+      "text": "lorem impsum"
+    }
+  ]
+}

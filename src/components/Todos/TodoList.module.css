@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* Base */
+:root {
+    --primary-color: #333;
+    --light-color: #f8f8ff;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+/* Cards */
+.todos-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    grid-auto-rows: max-content;
+    gap: 20px;
+    padding: 1.6rem;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}

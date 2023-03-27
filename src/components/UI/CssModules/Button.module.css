@@ -1,0 +1,19 @@
+
+/* Base */
+:root {
+    --primary-color: #333;
+    --light-color: #f8f8ff;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+/* Utilities */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: inline-block;
+    padding: 12.50px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}

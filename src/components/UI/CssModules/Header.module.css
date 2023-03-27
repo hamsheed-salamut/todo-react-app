@@ -1,0 +1,32 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 50px auto;
+	padding: 0 20px;
+}
+
+.create-todo-form input, .edit-todo-form input,
+.create-todo-form select, .edit-todo-form select {
+    border: 0;
+    width: 100%;
+    padding: 3px 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.create-todo-form input:focus, .edit-todo-form input:focus,
+.create-todo-form select:focus, .edit-todo-form select:focus {
+    outline: none;
+}
+
+.create-todo-form, .edit-todo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: .8;
+}
+
+.create-todo-form input, .edit-todo-form input {
+    border-bottom: 1px solid #b4b3cb;
+    width: 350px;
+}
