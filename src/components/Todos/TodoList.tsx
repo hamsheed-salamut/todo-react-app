@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from 'react-query'
-
+import { useNavigate } from 'react-router-dom'
 import classes from './TodoList.module.css'
 import Card from '../UI/Card'
 import TodoItem from './TodoItem'
@@ -8,12 +8,13 @@ import Todo from '../../models/todo'
 
 const TodoList: React.FC = () => {
     const queryClient = useQueryClient()
+    const navigate = useNavigate()
 
     const fetchTodos = async () => {
         const response = await fetch("http://localhost:5000/todos")
         const data = await response.json()
 
-        return data.map(({ id, name, text }: { id: number; name: string; text: string;}) => ({ id, name, text })) as Todo[];
+        return data.map(({ id, name, description, due_date }: { id: number; name: string; description: string; due_date:string;}) => ({ id, name, description, due_date })) as Todo[];
     }
 
     const {data, status} = useQuery("todos", fetchTodos)
@@ -35,6 +36,10 @@ const TodoList: React.FC = () => {
         mutate(todoId)
     }
 
+    const editTodoHandler = (todo: Todo) : void => {
+        navigate("/edit-todo", { state: { todo } });
+    }
+
     if (status === "loading") {
         return <div>Loading...</div>
     }
@@ -45,9 +50,10 @@ const TodoList: React.FC = () => {
 
     return (
         <Card>
+            <h1>Todo List Tracker</h1>
             <section className={classes["todos-container"]} data-cards>
                 {data && data.map((todo: Todo, key: number) => (
-                    <TodoItem key={key} item={todo} onRemoveTodo={removeTodoHandler}/>
+                    <TodoItem key={key} item={todo} onRemoveTodo={removeTodoHandler} onEditTodo={editTodoHandler}/>
                 ))}
             </section>
         </Card>

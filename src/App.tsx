@@ -1,51 +1,33 @@
 import { FC, useState } from 'react'
 import { QueryClientProvider, QueryClient } from 'react-query'
+import {Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Todo from './models/todo'
 
 import Header from './components/UI/Header'
 import TodoList from './components/Todos/TodoList'
-
+import NewTodo from './components/AddTodo/NewTodo'
+import EditTodo from './components/EditTodo/EditTodo'
 import './App.css'
 
 const queryClient = new QueryClient()
 
 const App: FC = () => {
 
-  const [todoList, setTodoList] = useState<Todo[]>([
-    {
-      id: 1,
-      done: false,
-      name: "work",
-      priority: "low",
-      due_date: new Date().toDateString(),
-      text: "Learn Typescript"
-    },
-    {
-      id: 2,
-      done: false,
-      name: "work",
-      priority: "low",
-      due_date: new Date().toDateString(),
-      text: "Learn React"
-    },
-    {
-      id: 3,
-      done: true,
-      name: "work",
-      priority: "high",
-      due_date: new Date().toDateString(),
-      text: "Learn JavaScript"
-    },
-  ])
-
   return (
-    <div className="app">
-        <Header/>
-        <QueryClientProvider client={queryClient}>
-        <TodoList />
-        </QueryClientProvider>
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/add-todo" element={<NewTodo/>}/>
+        <Route path="/edit-todo" element={<EditTodo/>}/>
+        <Route path="/" element={
+          <div className="app">
+            <Header/>
+              <QueryClientProvider client={queryClient}>
+              <TodoList />
+            </QueryClientProvider>
+          </div>
+        }/>
+      </Routes>
+    </Router>
   )
 }
 

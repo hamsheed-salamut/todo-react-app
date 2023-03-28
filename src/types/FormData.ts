@@ -1,10 +1,9 @@
-interface Todo {
+export interface FormData {
     id: number;
-    done: boolean;
     name: string;
     priority: string;
     due_date: string;
     description: string;
 }
 
-export default Todo;
+export type FormSubmitHandler = (data: FormData) => void

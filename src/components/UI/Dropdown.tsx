@@ -1,12 +1,22 @@
-import React from 'react'
+import classes from './CssModules/Dropdown.module.css'
 
-const Dropdown = () => {
+interface DropdownProps {
+  dropdownName: string;
+  options: string[];
+  value: string;
+  onChangeHandler: (value: string) => void;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({dropdownName, options, value, onChangeHandler}) => {
   return (
-    <div className="form-control">
-        <select data-new-todo-select required>
-            <option value="">Filter</option>
-            <option value="">Filter2</option>
-            <option value="">Filter3</option>
+    <div className={classes["form-group"]}>
+        <label htmlFor="todo-">{dropdownName}</label>
+        <select id="todo-" name={dropdownName} value={value} onChange={(e) => onChangeHandler(e.target.value)}>
+           {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+           ))}
         </select>
     </div>
   )

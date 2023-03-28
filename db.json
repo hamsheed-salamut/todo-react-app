@@ -2,24 +2,136 @@
   "todos": [
     {
       "id": 1,
-      "name": "json-server",
-      "priority": "low",
-      "due_date": "27 June 2023",
-      "text": "lorem impsum"
+      "name": "Finish projects",
+      "priority": "Low",
+      "due_date": "2023-04-10",
+      "description": "Complete all tasks for project before deadlines"
     },
     {
       "id": 2,
-      "name": "json-server",
-      "priority": "low",
-      "due_date": "27 June 2023",
-      "text": "lorem impsum"
+      "name": "Buy groceries",
+      "priority": "Low",
+      "due_date": "2023-04-03",
+      "description": "Get milk, eggs, bread, chicken, and vegetables"
     },
     {
       "id": 3,
-      "name": "json-server",
+      "name": "Clean houses",
+      "priority": "Low",
+      "due_date": "2023-04-07",
+      "description": "Vacuum, dust, and clean bathrooms"
+    },
+    {
+      "id": 4,
+      "name": "Study for exam",
+      "priority": "high",
+      "due_date": "2023-04-15",
+      "description": "Review all lecture notes and practice problems"
+    },
+    {
+      "id": 5,
+      "name": "Call doctors",
+      "priority": "Low",
+      "due_date": "2023-04-05",
+      "description": "Schedule appointment for annual checkups"
+    },
+    {
+      "id": 7,
+      "name": "Exercise",
+      "priority": "high",
+      "due_date": "2023-04-08",
+      "description": "Go for a run or take a fitness class"
+    },
+    {
+      "id": 8,
+      "name": "Read book",
       "priority": "low",
-      "due_date": "27 June 2023",
-      "text": "lorem impsum"
+      "due_date": "2023-04-06",
+      "description": "Spend an hour reading a novel or non-fiction book"
+    },
+    {
+      "id": 9,
+      "name": "Plan vacation",
+      "priority": "medium",
+      "due_date": "2023-04-20",
+      "description": "Research destinations, flights, and accommodations"
+    },
+    {
+      "id": 10,
+      "name": "Attend meeting",
+      "priority": "Low",
+      "due_date": "2023-04-11",
+      "description": "Prepare presentation and talking point"
+    },
+    {
+      "id": 11,
+      "name": "Fix car",
+      "priority": "medium",
+      "due_date": "2023-04-19",
+      "description": "Replace brake pads and change oil"
+    },
+    {
+      "id": 12,
+      "name": "Call mom",
+      "priority": "low",
+      "due_date": "2023-04-09",
+      "description": "Catch up and check in on family"
+    },
+    {
+      "id": 13,
+      "name": "Update resume",
+      "priority": "high",
+      "due_date": "2023-04-13",
+      "description": "Revise job descriptions and highlight achievements"
+    },
+    {
+      "id": 14,
+      "name": "Renew passport",
+      "priority": "medium",
+      "due_date": "2023-04-17",
+      "description": "Fill out application and take new passport photo"
+    },
+    {
+      "name": "Write blog post",
+      "priority": "High",
+      "due_date": "2023-06-08",
+      "description": "Choose topic and write 500-word post",
+      "id": 16
+    },
+    {
+      "name": "Submit tax returns",
+      "priority": "High",
+      "due_date": "2023-05-19",
+      "description": "File tax returns before deadline",
+      "id": 17
+    },
+    {
+      "name": "Submit tax returns",
+      "priority": "High",
+      "due_date": "2023-05-19",
+      "description": "File tax returns before deadline",
+      "id": 18
+    },
+    {
+      "id": 19,
+      "name": "React",
+      "priority": "Low",
+      "due_date": "2023-03-31",
+      "description": "Prepare demo react"
+    },
+    {
+      "id": 20,
+      "name": "React",
+      "priority": "High",
+      "due_date": "2023-03-31",
+      "description": "Prepare demo react for todo app"
+    },
+    {
+      "id": 21,
+      "name": "React",
+      "priority": "High",
+      "due_date": "2023-03-30",
+      "description": "Prepare react demo for todo app"
     }
   ]
 }
