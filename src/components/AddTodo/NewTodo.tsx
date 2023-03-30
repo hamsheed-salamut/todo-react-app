@@ -1,12 +1,12 @@
 import TodoForm from "../Form/TodoForm"
-import { FormData } from "../../types/FormData"
+import { FormData } from "../../types/FormData" // https://stackoverflow.com/questions/43281741/how-to-use-paths-in-tsconfig-json
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useForm } from 'react-hook-form'
 import Button from "../UI/Button"
 import { useNavigate } from 'react-router-dom'
 
-const NewTodo: React.FC = () => {
+const NewTodo: React.FC = () => { // you don't need to use React:FC always
     const { reset } = useForm()
     const navigate  = useNavigate();
     const onAddNewTodo = async (data: FormData) => {
@@ -49,13 +49,13 @@ const NewTodo: React.FC = () => {
                 <ToastContainer/>
             </>
         )
-    } catch (error: unknown) {
+    } catch (error: unknown) { // nice unknown is better than any
         if (error instanceof Error) {
             toast.error(`Error: ${error.message}`, {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
-        return (<></>)
+        return (<></>) // TODO: here you can return null or undefined
     }
 }
 

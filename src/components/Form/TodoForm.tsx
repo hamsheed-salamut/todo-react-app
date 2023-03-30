@@ -6,15 +6,15 @@ import { FormData, FormSubmitHandler} from '../../types/FormData'
 import Todo from '../../models/todo'
 
 interface Props {
-    children?: React.ReactNode;
+    children?: React.ReactNode; // not used = do you know how to use them ?
     onSubmit: FormSubmitHandler;
     buttonActionName: string;
     reset: () => void;
     todo?: Todo;
   }
   
-  const TodoForm: React.FC<Props> = (props) => {
-  const priorityOptions = Object.values(Priority)
+  const TodoForm: React.FC<Props> = (props) => { // common used patter is to destruct here props {onSubmit, buttonActionName, reset, todo}
+  const priorityOptions = Object.values(Priority) // nice
   const { register, handleSubmit, reset } = useForm<FormData>()
 
   const onSubmit = (data: FormData) => {
@@ -28,7 +28,7 @@ interface Props {
     priority: props.todo.priority,
     due_date: props.todo.due_date,
     description: props.todo.description
-  } : undefined
+  } : undefined; // = props.todo ? { ...props.todo }: undefined
 
   return (
     <div className={classes["small-container"]}>
