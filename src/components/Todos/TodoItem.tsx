@@ -11,7 +11,7 @@ const TodoItem: React.FC<{ item: Todo; onRemoveTodo: (id: number) => void; onEdi
         <p className={classes["todo-description"]}>
             {props.item.description}
         </p>
-    <TodoActions onRemoveTodo={props.onRemoveTodo.bind(null, props.item.id)} onEditTodo={props.onEditTodo.bind(null, props.item)}/>
+    <TodoActions onRemoveTodo={props.onRemoveTodo.bind(null, props.item.id)} onEditTodo={props.onEditTodo.bind(null, props.item)}/> {/* bind ? */}
 </div>
   )
 }

@@ -11,7 +11,7 @@ const TodoList: React.FC = () => {
     const navigate = useNavigate()
 
     const fetchTodos = async () => {
-        const response = await fetch("http://localhost:5000/todos")
+        const response = await fetch("http://localhost:5000/todos") // https://www.newline.co/@bespoyasov/how-to-use-fetch-with-typescript--a81ac257
         const data = await response.json()
 
         return data.map(({ id, name, description, due_date }: { id: number; name: string; description: string; due_date:string;}) => ({ id, name, description, due_date })) as Todo[];
