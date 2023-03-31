@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import classes from './CssModules/Button.module.css'
 
-interface Props {
+export interface Props {
   children?: React.ReactNode;
   onClick?: () => void;
   type?: 'submit' | 'reset' | 'button' | undefined;

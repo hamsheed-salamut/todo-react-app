@@ -4,6 +4,9 @@
     </a>
 </h1>
 
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/hamsheed-salamut/todo-react-app/actions/workflows/main.yml)
+
+
 ## Quick Insight
 ![CPT2303281543-1046x456](https://user-images.githubusercontent.com/23207774/228226809-af13f7ee-c0d4-43f2-9793-25c7a43144a2.gif)
 

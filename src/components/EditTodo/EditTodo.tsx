@@ -58,7 +58,7 @@ const EditTodo: React.FC = () => {
     <>
         <Button style={{textAlign: "left"}} iconName="fa fa-home" onClick={onNavigateHandler}>Home</Button>
         <h1> Edit Todo </h1>
-        <TodoForm buttonActionName="Edit Todo" onSubmit={onEditTodo} reset={reset} todo={todo}></TodoForm>
+        <TodoForm buttonActionName="Edit Todo" buttonIconName='fa fa-edit' onSubmit={onEditTodo} onReset={reset} todo={todo}></TodoForm>
         <ToastContainer/>
     </>
   )

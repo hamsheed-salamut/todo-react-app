@@ -16,7 +16,7 @@ const Header = () => {
 
     <div className={classes.container}>
         <form className={classes["create-todo-form"]} data-new-todo-form>
-            <Button onClick={onAddTodoHandler} type="button">Add Todo</Button>
+            <Button onClick={onAddTodoHandler} iconName="fa fa-plus" type="button">Add Todo</Button>
         </form>
     </div>
   )
