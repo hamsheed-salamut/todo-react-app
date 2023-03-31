@@ -5,7 +5,7 @@
       "name": "Finish projects",
       "priority": "Low",
       "due_date": "2023-04-10",
-      "description": "Complete all tasks for project before deadlines"
+      "description": "Complete all tasks for project before deadlinesss"
     },
     {
       "id": 2,
@@ -111,27 +111,6 @@
       "due_date": "2023-05-19",
       "description": "File tax returns before deadline",
       "id": 18
-    },
-    {
-      "id": 19,
-      "name": "React",
-      "priority": "Low",
-      "due_date": "2023-03-31",
-      "description": "Prepare demo react"
-    },
-    {
-      "id": 20,
-      "name": "React",
-      "priority": "High",
-      "due_date": "2023-03-31",
-      "description": "Prepare demo react for todo app"
-    },
-    {
-      "id": 21,
-      "name": "React",
-      "priority": "High",
-      "due_date": "2023-03-30",
-      "description": "Prepare react demo for todo app"
     }
   ]
 }

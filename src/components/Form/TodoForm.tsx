@@ -6,28 +6,28 @@ import { FormData, FormSubmitHandler} from '../../types/FormData'
 import Todo from '../../models/todo'
 
 interface Props {
-    children?: React.ReactNode;
     onSubmit: FormSubmitHandler;
     buttonActionName: string;
-    reset: () => void;
+    onReset: () => void;
     todo?: Todo;
+    buttonIconName?: string;
   }
   
-  const TodoForm: React.FC<Props> = (props) => {
+  const TodoForm: React.FC<Props> = ({ onSubmit, buttonActionName, onReset, todo, buttonIconName}) => {
   const priorityOptions = Object.values(Priority)
   const { register, handleSubmit, reset } = useForm<FormData>()
 
-  const onSubmit = (data: FormData) => {
-    props.onSubmit(data)
+  const onSubmitData = (data: FormData) => {
+    onSubmit(data)
     reset()
   }
 
-  const defaultValues = props.todo ? {
-    id: props.todo.id,
-    name: props.todo.name,
-    priority: props.todo.priority,
-    due_date: props.todo.due_date,
-    description: props.todo.description
+  const defaultValues = todo ? {
+    id: todo.id,
+    name: todo.name,
+    priority: todo.priority,
+    due_date: todo.due_date,
+    description: todo.description
   } : undefined
 
   return (
@@ -56,7 +56,7 @@ interface Props {
                 <label htmlFor="todo-description">Description</label>
                 <textarea id="todo-description" {...register('description')} defaultValue={defaultValues?.description}></textarea>
             </div>
-           <Button type="submit" iconName='fa fa-plus'>{props.buttonActionName}</Button>
+           <Button type="submit" iconName={buttonIconName}>{buttonActionName}</Button>
         </form>
     </div>
     )
